@@ -3,7 +3,7 @@ sudo apt-get -y install build-essential libasound2 libasound2-dev libegl1-mesa-d
 # Build Reicast
 git clone https://github.com/reicast/reicast-emulator.git
 cd reicast-emulator/reicast/linux
-make
+make -j$(nproc)
 
 # Run Reicast
 mkdir -p ~/.local/share/reicast/data/
